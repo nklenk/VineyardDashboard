@@ -15,17 +15,24 @@ Stretch Goals
 
 ### Soil moisture 
 Sensor Used:
+[Adafruit STEMMA Soil Sensor - I2C Capacitive Moisture Sensor - JST PH 2mm](https://www.adafruit.com/product/4026)
 
 Considerations:
-these vlaues can be used as both a proxy to soil drainage as well as in aggregate to indicate overall water exposure
+these values can be used as both a proxy to soil drainage as well as in aggregate to indicate overall water exposure
 
 
 ### Sun Exposure
 Sensor Used:
 
 Considerations:
-some poto sensors are binary indicating that a threshold has been crossed
-Sensors used are supposed to deliver a range of values
+some photo sensors are binary indicating that a threshold has been crossed
+Sensors used are supposed to deliver a range of values 
+
+### Temperature and Pressure
+Sensor Used:
+
+Considerations:
+
 
 ### Solar Power
 Pannel:
