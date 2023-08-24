@@ -42,11 +42,11 @@ battery:
 ### Satelite Imagery
 
 greenery score
-leverage sat data from (). use pixel color as a proxy for foliage density
+leverage sat data from [MODIS](https://lpdaac.usgs.gov/products/mod13a2v061/). use pixel color as a proxy for foliage density
 
 
 ## Data store
-On prem database with cloud backup
+On prem database with cloud backup. See [Database's documentation](Database/README.md)
 
 ## Wifi Mesh
 In order to used meshing the wifi needs to support ()
@@ -59,7 +59,7 @@ Relevant repo
 https://github.com/binnes/WiFiMeshRaspberryPi/blob/master/part1/PIMESH.md
 
 Source for Sat imagery
-TODO
+MODIS data provided by NASA
 
 Source for historical temperature and rainfall
 
