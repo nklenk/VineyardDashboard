@@ -1,6 +1,5 @@
 CREATE TABLE VineLocations (
     VineNumber int NOT NULL,
-    Lat geo,
-    Lon geo,
+    Coordinates ST_Point,
     PRIMARY KEY (VineNumber)
-)
+);

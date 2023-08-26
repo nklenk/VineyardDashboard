@@ -7,4 +7,4 @@ CREATE TABLE SensorReadings (
     Sunlight FLOAT,
     Temperature FLOAT,
     PRIMARY KEY (UUID)
-)
+);

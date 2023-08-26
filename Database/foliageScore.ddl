@@ -4,6 +4,6 @@ CREATE TABLE FoliageScore (
     PixelValuesR int,
     PixelValuesG int,
     PixelValuesB int,
-    BBOX geo,
+    BBOX ST_Polygon,
     PRIMARY KEY (UUID)
-)
+);

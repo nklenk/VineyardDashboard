@@ -1,6 +1,5 @@
 CREATE TABLE HostLocations (
     Hostname varchar(255) NOT NULL,
-    Lat geo,
-    Lon geo,
+    Coordinates ST_Point,
     PRIMARY KEY (Hostname)
-)
+);
