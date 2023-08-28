@@ -9,3 +9,6 @@ Database is sqlite based with additional functionality provided by [SpatiaLite](
 
 Using SQLite + SpatiaLite you can effectively deploy an alternative open source Spatial DBMS roughly equivalent to PostgreSQL + PostGIS.
 This will assist in migration in the event of scaling or moving to an off prem data store.
+
+
+We will need to go to off prem database immediately as work across nodes will get too confusing if main laptop is db

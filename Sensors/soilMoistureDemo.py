@@ -3,14 +3,14 @@
 
 import time
 
-import board
+import board #circut python package
 
-from adafruit_seesaw.seesaw import Seesaw
+from adafruit_seesaw.seesaw import Seesaw #circut python package
 
 i2c_bus = board.I2C()  # uses board.SCL and board.SDA
 # i2c_bus = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
 
-ss = Seesaw(i2c_bus, addr=0x36)
+ss = Seesaw(i2c_bus, addr=0x36) #determine address by looking at output of terminal command 'i2cdetect -y 1'
 
 while True:
     # read moisture level through capacitive touch pad
