@@ -11,7 +11,6 @@ sudo apt-get install python3-pip
 
 sudo pip3 install --upgrade setuptools
 
-
 # Double check pi config and install Blinka
 cd ~
 sudo pip3 install --upgrade adafruit-python-shell
@@ -27,16 +26,14 @@ python3 blinkaTest.py
 # Now we can install required libraries
 sudo pip3 install adafruit-circuitpython-seesaw # For the soil sensor
 
-# Download circuit python image from https://circuitpython.org/downloads
-# Be sure to select the correct board
+# Validate soil moisture sensor and attached temp sensor
+python3 ~/VineyardDashboard/Sensors/soilMoistureInitTest.py
 
-# Download required libraries locally from (). Make sure they are the correct version
+# Lux sensor
+# install relevant library provided by Adafruit
+# Adafruit circuitpython should already be installed
+sudo pip3 install adafruit-circuitpython-busdevice
+sudo pip3 install adafruit-circuitpython-tsl2591
 
-# scp circuit python libraries into the lib folder on the board
-
-# ssh into pi
-# Validate library files are accessible
-
-# git clone repo
-
-# run repo
+# Validate lux and spectrums of sun sensor
+python3 ~/VineyardDashboard/Sensors/sunExposureInitTest.py
