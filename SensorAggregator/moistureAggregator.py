@@ -1,4 +1,4 @@
-import Sensors.soilMoisture
+import Sensors.soilMoistureSensor
 
 # Read in moisture values given a heartbeat and max timeframe
 
