@@ -75,11 +75,13 @@ This enables the piboard to interact with its sensors. It takes a few steps to i
 [Helpful how-to video](https://www.youtube.com/watch?v=Epy6RvvpHOQ)
 
 
-#TODO automate this 
+#TODO automate this via a script
 
 
+# Future
+Look into LoRa devices that are used for long range messaging.
+could be a good low power alternative to the pi zero Ws being used now.
 
-
-
+[performance testing different batman-adv algorithms](https://ieeexplore.ieee.org/document/8421863)
 
 

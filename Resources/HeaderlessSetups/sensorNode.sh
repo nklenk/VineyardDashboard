@@ -29,6 +29,9 @@ sudo pip3 install adafruit-circuitpython-seesaw # For the soil sensor
 # Validate soil moisture sensor and attached temp sensor
 python3 ~/VineyardDashboard/Sensors/soilMoistureInitTest.py
 
+# the I2C connection needs to be expanded before any more sensors can be added
+
+
 # Lux sensor
 # install relevant library provided by Adafruit
 # Adafruit circuitpython should already be installed
