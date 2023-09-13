@@ -1,0 +1,6 @@
+auto wlan0
+iface wlan0 inet manual
+    mtu 1532 # Increase packet size to account for batman-adv header
+    wireless-channel 1 # Any channel from 1-14
+    wireless-essid call-code-mesh
+    wireless-mode ad-hoc
