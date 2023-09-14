@@ -33,10 +33,10 @@ python3 ~/VineyardDashboard/Sensors/soilMoistureInitTest.py
 
 
 # Lux sensor
-# install relevant library provided by Adafruit
-# Adafruit circuitpython should already be installed
-sudo pip3 install adafruit-circuitpython-busdevice
-sudo pip3 install adafruit-circuitpython-tsl2591
-
-# Validate lux and spectrums of sun sensor
-python3 ~/VineyardDashboard/Sensors/sunExposureInitTest.py
+## install relevant library provided by Adafruit
+## Adafruit circuitpython should already be installed
+#sudo pip3 install adafruit-circuitpython-busdevice
+#sudo pip3 install adafruit-circuitpython-tsl2591
+#
+## Validate lux and spectrums of sun sensor
+#python3 ~/VineyardDashboard/Sensors/sunExposureInitTest.py

@@ -20,13 +20,21 @@ chmod +x ~/start-batman-adv.sh
 
 sudo touch /etc/network/interfaces.d/wlan0
 
-sudo chmod 777 /etc/network/interfaces.d/wlan0
+sudo chmod 775 /etc/network/interfaces.d/wlan0
+
+auto wlan0
+iface wlan0 inet manual
+    mtu 1532 # Increase packet size to account for batman-adv header
+    wireless-channel 1 # Any channel from 1-14
+    wireless-essid call-code-mesh
+    wireless-mode ad-hoc
 
 sudo echo 'auto wlan0
 iface wlan0 inet manual
-    wireless-channel 1
-    wireless-essid call-code-mesh
-    wireless-mode ad-hoc' >> /etc/network/interfaces.d/wlan0
+    mtu 1532 # Increase packet size to account for batman-adv header
+    wireless-channel 1 # Any channel from 1-14
+    wireless-essid call-code-mesh
+    wireless-mode ad-hoc' >> /etc/network/interfaces.d/wlan0
 
 echo 'batman-adv' | sudo tee --append /etc/modules
 
@@ -38,3 +46,5 @@ vim /etc/rc.local
 $(pwd)/start-batman-adv.sh &
 
 sudo shutdown -h now
+
+/home/nklenk/start-batman-adv.sh &
