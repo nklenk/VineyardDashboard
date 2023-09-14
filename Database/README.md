@@ -1,14 +1,11 @@
 
-
-Database is sqlite based with additional functionality provided by [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index)
-[Sqlite install instructions](https://www.servermania.com/kb/articles/install-sqlite)
-
-[SpatiaLite installation instructions for mac](https://medium.com/@carusot42/installing-and-loading-spatialite-on-macos-28bf677f0436#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImMzYWZlN2E5YmRhNDZiYWU2ZWY5N2U0NmM5NWNkYTQ4OTEyZTU5NzkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDgyNjYwNTg0OTI3MzEwNDc0NDUiLCJlbWFpbCI6Im5laWwua2xlbmtAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTY5MjgwMzg3MSwibmFtZSI6Ik5laWwgS2xlbmsiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Zk1OR2FOVmhaWENoYXRvWDJlUlR1UG9UZ2lxTWxLenhzN1NOWVhTaDQ9czk2LWMiLCJnaXZlbl9uYW1lIjoiTmVpbCIsImZhbWlseV9uYW1lIjoiS2xlbmsiLCJsb2NhbGUiOiJlbiIsImlhdCI6MTY5MjgwNDE3MSwiZXhwIjoxNjkyODA3NzcxLCJqdGkiOiI1OTQ3YjY1NWI2YjQ2MDRkNzFkNzVmNjVhMTFkYmFkYjFmNmRmNzVkIn0.di_pRtLK4frOmH6BvxSkWqsHVvy5EWsS0QjvVe-5lgDm8NBLhca2L0lXmF6xJUHemT9CDd7EcNsNoStlstdJMzDwV_FZa67teekZHOl03v3gbAB4BqRwUYP2VANFG3-KbKlf8X5McOa31eaNePVNMxr0msBt93JvQ8WmHCoKSLm7yX_gIbUa4xpQmv5oe3EQD83hX9vmAmWHpmjmnX6jYIBzU3sYdCjt7tXStU4ldBIAAoMW0XArEiuWmYNMm9hvzMqBVpn0R8MzYH2e1urykkXp4BcYaAycrKBlG9_E1_Vej45vO1kQY_3iLLb41D1Ojlr_yRUNdvqFQQtkBD7vrw)
-
-[How to spatially enable a sqlite database](https://desktop.arcgis.com/en/arcmap/latest/manage-data/databases/spatially-enable-sqlilte.htm)
-
-Using SQLite + SpatiaLite you can effectively deploy an alternative open source Spatial DBMS roughly equivalent to PostgreSQL + PostGIS.
-This will assist in migration in the event of scaling or moving to an off prem data store.
-
-
 We will need to go to off prem database immediately as work across nodes will get too confusing if main laptop is db
+
+
+went with postgres so that we have access to postgist
+
+be sure to set db to Publicly Accessible = Yes so that it can be accessed remotely
+
+#TODO Figure out security group for database so that all nodes can write to db.
+--> public access to postgress db with password https://stackoverflow.com/questions/52324170/aws-rds-for-postgresql-cannot-be-connected-after-several-hours/52346331#52346331
+
