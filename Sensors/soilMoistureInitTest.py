@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 import time
+import uuid
 
 import board #circut python package
 
@@ -21,3 +22,12 @@ while True:
 
     print("temp: " + str(temp) + "  moisture: " + str(touch))
     time.sleep(1)
+
+
+# Send to the table
+uid = uuid.UUID
+
+
+
+
+

@@ -1,6 +1,6 @@
 CREATE TABLE SensorReadings (
     UUID varchar(255) NOT NULL,
-    Hostname int,
+    Hostname varchar(255),
     Timestamp timestamp,
     SensorType varchar(255),
     SoilMoisture FLOAT,

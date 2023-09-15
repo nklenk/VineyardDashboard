@@ -7,7 +7,8 @@
 # ssh into pi
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install python3-pip
+sudo apt-get install -y python3-pip
+sudo apt-get install -y git
 
 sudo pip3 install --upgrade setuptools
 
@@ -20,11 +21,16 @@ sudo python3 raspi-blinka.py
 # Validate that folders were created
 ls /dev/i2c* /dev/spi*
 
+# clone in the repo
+git clone https://github.com/nklenk/VineyardDashboard.git
+# git checkout Feature/PoC
+
 # Run blinkaTest.py to validate I2C and SPI connections are correct
-python3 blinkaTest.py
+python3 VineyardDashboard/Resources/blinkaTest.py
 
 # Now we can install required libraries
 sudo pip3 install adafruit-circuitpython-seesaw # For the soil sensor
+
 
 # Validate soil moisture sensor and attached temp sensor
 python3 ~/VineyardDashboard/Sensors/soilMoistureInitTest.py
