@@ -2,7 +2,7 @@ import psycopg2
 
 #TODO: move database information to a settings yaml
 
-connectionInfo = "database='database-1', " \
+connectionInfo = "dbname='database-1', " \
                  "user='postgres', " \
                  "password='hopte6-xaktUs-dirjyd', " \
                  "host='database-1.cyjnrmeqg58a.us-east-2.rds.amazonaws.com', " \
@@ -13,32 +13,31 @@ connectionInfo = "database='database-1', " \
 
 class DBUtils():
 
-    def __init__(self, connectionInfo):
-        # connectionInfo = "database='database-1', " \
-        #                  "user='postgres', " \
-        #                  "password='hopte6-xaktUs-dirjyd', " \
-        #                  "host='database-1.cyjnrmeqg58a.us-east-2.rds.amazonaws.com', " \
-        #                  "port='5432'"
+    def __init__(self):
         # update to match current aws table
         print("##")
-        print(connectionInfo)
-        self.connection = psycopg2.connect(connectionInfo)
+        # print(connectionInfo)
+        # self.connection = psycopg2.connect(connectionInfo)
+        self.connection = psycopg2.connect(dbname="postgres", user="postgres", password="hopte6-xaktUs-dirjyd",
+                                           host="database-1.cyjnrmeqg58a.us-east-2.rds.amazonaws.com", port="5432")
         print(self.connection)
         self.cursor = self.connection.cursor()
 
-    def dbInsert(self, content):
+    def Insert(self, content):
         # self.connection
         print("Insert: {}".format(content))
+        self.execute(content)
+        self.connection.commit()
         pass
 
     def execute(self, content):
         try:
+            print("query: {}".format(content))
             self.cursor.execute(content)
+            self.connection.commit()
         except psycopg2.Error as e:
             print("Error: {}".format(e))
             pass
 
-print("**")
-print(connectionInfo)
-dbutil = DBUtils(connectionInfo)
-dbutil.dbInsert(connectionInfo)
+# dbutil = DBUtils(connectionInfo)
+# dbutil.dbInsert(connectionInfo)

@@ -3,6 +3,10 @@
 
 import time
 import uuid
+from Database import dBUtils
+import socket
+import datetime
+from statistics import mean
 
 import board #circut python package
 
@@ -13,21 +17,33 @@ i2c_bus = board.I2C()  # uses board.SCL and board.SDA
 
 ss = Seesaw(i2c_bus, addr=0x36) #determine address by looking at output of terminal command 'i2cdetect -y 1'
 
-while True:
-    # read moisture level through capacitive touch pad
-    touch = ss.moisture_read()
+moistureReadings = []
+tempReadings = []
+while len(tempReadings) < 10:
 
+    # read moisture level through capacitive touch pad
+    moisture = ss.moisture_read()
+    moistureReadings.append(moisture)
     # read temperature from the temperature sensor
     temp = ss.get_temp()
+    tempReadings.append(temp)
+    print("temp: " + str(temp) + "  moisture: " + str(moisture))
+    time.sleep(5)
 
-    print("temp: " + str(temp) + "  moisture: " + str(touch))
-    time.sleep(1)
 
 
 # Send to the table
-uid = uuid.UUID
-
-
+insertTemp = mean(tempReadings)
+print("insertTemp: {}".format(insertTemp))
+insertMoisture = mean(moistureReadings)
+print("insertMoisture: {}".format(insertMoisture))
+db = dBUtils.DBUtils()
+currentUuid = str(uuid.uuid4())
+hostname = socket.gethostname()
+currentTimestamp = datetime.datetime.now()
+insertQuery = "INSERT INTO moisturesensorreadings (UUID, HOSTNAME, TIMESTAMP, SOILMOISTURE, TEMPERATURE) VALUES ({}, {}, {}, {}, {})".format("'"+currentUuid+"'", "'"+hostname+"'", "'"+str(currentTimestamp)+"'", moisture, temp)
+print("insertQuery: {}".format(insertQuery))
+db.execute(insertQuery)
 
 
 
