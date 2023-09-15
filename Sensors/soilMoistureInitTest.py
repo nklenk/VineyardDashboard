@@ -33,9 +33,9 @@ while len(tempReadings) < 10:
 
 
 # Send to the table
-insertTemp = mean(tempReadings)
+insertTemp = round(mean(tempReadings), 3)
 print("insertTemp: {}".format(insertTemp))
-insertMoisture = mean(moistureReadings)
+insertMoisture = round(mean(moistureReadings), 3)
 print("insertMoisture: {}".format(insertMoisture))
 db = dBUtils.DBUtils()
 currentUuid = str(uuid.uuid4())
