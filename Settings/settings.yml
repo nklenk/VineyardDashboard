@@ -1,0 +1,5 @@
+database: #TODO: Collect from AWS
+  username: username
+  password: pwd
+  host: local
+  dbname: testDb
