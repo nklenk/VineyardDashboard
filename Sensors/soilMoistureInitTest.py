@@ -1,12 +1,19 @@
-# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
-# SPDX-License-Identifier: MIT
 
-import time
-import uuid
-from Database import dBUtils
 import socket
 import datetime
+import sys
+import time
+import uuid
 from statistics import mean
+from pathlib import Path
+
+# Necessary to import Database on nodes
+path_root = Path(__file__).parents[1]
+sys.path.append(str(path_root))
+print(sys.path)
+
+from Database import dBUtils
+
 
 import board #circut python package
 

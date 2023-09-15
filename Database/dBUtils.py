@@ -2,7 +2,7 @@ import psycopg2
 
 #TODO: move database information to a settings yaml
 
-connectionInfo = "dbname='database-1', " \
+connectionInfo = "dbname='postgres', " \
                  "user='postgres', " \
                  "password='hopte6-xaktUs-dirjyd', " \
                  "host='database-1.cyjnrmeqg58a.us-east-2.rds.amazonaws.com', " \
