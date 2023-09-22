@@ -20,14 +20,8 @@ chmod +x ~/start-batman-adv.sh
 
 sudo touch /etc/network/interfaces.d/wlan0
 
+#TODO: fix
 sudo chmod 775 /etc/network/interfaces.d/wlan0
-
-auto wlan0
-iface wlan0 inet manual
-    mtu 1532 # Increase packet size to account for batman-adv header
-    wireless-channel 1 # Any channel from 1-14
-    wireless-essid call-code-mesh
-    wireless-mode ad-hoc
 
 sudo echo 'auto wlan0
 iface wlan0 inet manual
@@ -40,8 +34,7 @@ echo 'batman-adv' | sudo tee --append /etc/modules
 
 echo 'denyinterfaces wlan0' | sudo tee --append /etc/dhcpcd.conf  # if missed, node will connect to and mesh will form on home network
 
-## TODO: find a better way
-vim /etc/rc.local
+sudo vim /etc/rc.local
 # insert before exit
 $(pwd)/start-batman-adv.sh &
 

@@ -26,7 +26,7 @@ class DBUtils():
     def Insert(self, content):
         # self.connection
         print("Insert: {}".format(content))
-        self.execute(content)
+        self.cursor.execute(content)
         self.connection.commit()
         pass
 
