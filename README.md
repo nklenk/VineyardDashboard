@@ -7,10 +7,10 @@ Initial version of sensor aggregator codebase
 aggregate data across sensors into a database
 
 Stretch Goals
+- solar powered
 - Viewable online
 - incorporate MODIS vegetation data
 - self healing nodes
-- solar powered
 
 
 ### Soil moisture 
@@ -50,7 +50,7 @@ On prem database with cloud backup. See [Database's documentation](Database/READ
 #TODO: cloud option
 
 ## Wifi Mesh
-In order to used meshing the wifi needs to support ()
+In order to used meshing the wifi needs to support IBSS 
 
 All raspberry pi chips (newer) have it, but a cheaper 3rd party solution is somthing that should be considered.
 
@@ -67,7 +67,8 @@ Source for historical temperature and rainfall
 
 ## Raspberry Pi Prep
 
-It is probably best to [ssh](https://raspberrypi-guide.github.io/networking/connecting-via-ssh#:~:text=Enable%20SSH%20on%20the%20Raspberry%20Pi,-By%20default%2C%20SSH&text=To%20enable%20SSH%20via%20the,and%20enter%20sudo%20raspi%2Dconfig%20.) into the pi you are trying to update. 
+It is best to [ssh](https://raspberrypi-guide.github.io/networking/connecting-via-ssh#:~:text=Enable%20SSH%20on%20the%20Raspberry%20Pi,-By%20default%2C%20SSH&text=To%20enable%20SSH%20via%20the,and%20enter%20sudo%20raspi%2Dconfig%20.) into the pi you are trying to update. 
+Follow headerless setups
 
 ### install circuit python
 This enables the piboard to interact with its sensors. It takes a few steps to install.\
@@ -85,3 +86,12 @@ could be a good low power alternative to the pi zero Ws being used now.
 [performance testing different batman-adv algorithms](https://ieeexplore.ieee.org/document/8421863)
 
 
+# Suppliers
+
+### Parts
+[Adafruit](https://www.adafruit.com) \
+[Voltaic](https://voltaicsystems.com/industrial-and-iot/)
+
+### Maps and Geospatial Data 
+[MapBox](https://www.mapbox.com) \
+[MODIS (NASA)](https://modis.gsfc.nasa.gov)
