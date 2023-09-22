@@ -27,7 +27,6 @@ ls /dev/i2c* /dev/spi*
 git clone https://github.com/nklenk/VineyardDashboard.git
 cd VineyardDashboard
 git fetch
-git checkout Feature/PoC
 
 # Run blinkaTest.py to validate I2C and SPI connections are correct
 python3 ~/VineyardDashboard/Resources/blinkaTest.py
