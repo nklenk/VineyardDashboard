@@ -6,7 +6,8 @@
 import time
 import logging
 import sys
-import gpiozero as GPIO
+# included package in raspberrypi image
+import RPi.GPIO as GPIO
 from flowSensor import flowSensor
 
 # boardRevision = GPIO.RPI_REVISION
