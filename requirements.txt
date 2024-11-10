@@ -1,0 +1,18 @@
+#general
+yaml
+boto3
+psycopg2
+requests
+
+#circut pi
+board
+adafruit-blinka
+digitalio
+busio
+adafruit_seesaw
+
+# Maps
+psycopg2-binary 
+pandas
+geopandas
+# choose one --> shapely folium matplotlib
