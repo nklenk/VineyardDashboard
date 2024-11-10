@@ -1,5 +1,13 @@
 database: #TODO: Collect from AWS
-  username: username
+  dbname: testDb
+  username: postgres
   password: pwd
   host: local
-  dbname: testDb
+
+
+mapbox:
+  api-key: pk.eyJ1IjoibmtsZW5rIiwiYSI6ImNtMnhmYzdtZDA0dmoybHB4dmc4ajIwNjQifQ.6PP5QqJPsRMysjD1NK6fXA
+
+
+aws:
+  root-email: neilklenkaws@gmail.com
