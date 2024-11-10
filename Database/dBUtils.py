@@ -1,4 +1,5 @@
 import psycopg2
+import yaml
 
 #TODO: move database information to a settings yaml
 
@@ -16,10 +17,13 @@ class DBUtils():
     def __init__(self):
         # update to match current aws table
         print("##")
+        settings = yaml.load("Settings/settings.yaml")
+        dbSettings = settings["database"]
         # print(connectionInfo)
         # self.connection = psycopg2.connect(connectionInfo)
-        self.connection = psycopg2.connect(dbname="postgres", user="postgres", password="hopte6-xaktUs-dirjyd",
-                                           host="database-1.cyjnrmeqg58a.us-east-2.rds.amazonaws.com", port="5432")
+        self.connection = psycopg2.connect(dbname=dbSettings['dbname'], user=dbSettings['user'],
+                                           password=dbSettings['password'],host=dbSettings['host'],
+                                           port=dbSettings['port'])
         print(self.connection)
         self.cursor = self.connection.cursor()
 
