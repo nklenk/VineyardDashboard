@@ -12,7 +12,7 @@ busio
 adafruit_seesaw
 
 # Maps
-psycopg2-binary 
+psycopg2-binary
 pandas
 geopandas
 # choose one --> shapely folium matplotlib
