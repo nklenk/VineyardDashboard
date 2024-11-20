@@ -54,6 +54,8 @@ In order to used meshing the wifi needs to support IBSS
 
 All raspberry pi chips (newer) have it, but a cheaper 3rd party solution is somthing that should be considered.
 
+B.A.T.M.A.N. advanced (batman-adv) is a Layer 2 mesh networking protocol leveraged here to orchestrate the mesh nodes. 
+More information can be found [here](Documents/meshProtocolBatman.md)
 
 ## Resources
 Relevant repo
